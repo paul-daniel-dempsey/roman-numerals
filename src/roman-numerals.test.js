@@ -21,9 +21,9 @@ describe("decToRoman", () => {
         expect(decToRoman(1666)).toEqual("MDCLXVI");
         expect(decToRoman(2001)).toEqual("MMI");
     })  
-    // test('(C) Size Test Not > 3000 ', () => {
-    //     expect(decToRoman(3001)).toEqual("");
-    // })
+    test('(C) Size Test Not > 3000 ', () => {
+        expect(decToRoman(3001)).toEqual("");
+    })
     // test('(D) Size Test <= 0 ', () => {
     //     expect(decToRoman(0)).toEqual("");
     //     expect(decToRoman(-1)).toEqual("");
