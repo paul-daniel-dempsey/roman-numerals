@@ -36,20 +36,20 @@ describe("decToRoman", () => {
 // Inverse Of Pt1 (A-D)
 
 describe("romanToDec", () => {
-    // it.each([['I',1],['V',5],['X',10],['L',50],['C',100],['D',500],['M',1000]])
-    // (`(A) Check %s for Decimal Equivalent`,
-    //     (numeral,result) => {
-    //         expect(romanToDec(numeral)).toEqual(result);
-    //     }    
-    // )
-    // test('(B) Size Test Not > 3000 ', () => {
-    //     expect(romanToDec("MMMI")).toEqual(0);
-    // })
-    // test('(C) Size Test <= 0 ', () => {
-    //     expect(romanToDec("")).toEqual(0);
-    // })
-    // test('(D) Check Decimals (All + Double Numeral) ', () => {
-    //     expect(romanToDec("MDCLXVI")).toEqual(1666);
-    //     expect(romanToDec("MMI")).toEqual(2001);
-    // }) 
+    it.each([['I',1],['V',5],['X',10],['L',50],['C',100],['D',500],['M',1000]])
+    (`(A) Check %s for Decimal Equivalent`,
+        (numeral,result) => {
+            expect(romanToDec(numeral)).toEqual(result);
+        }    
+    )
+    test('(B) Size Test Not > 3000 ', () => {
+        expect(romanToDec("MMMI")).toEqual(0);
+    })
+    test('(C) Size Test <= 0 ', () => {
+        expect(romanToDec("")).toEqual(0);
+    })
+    test('(D) Check Decimals (All + Double Numeral) ', () => {
+        expect(romanToDec("MDCLXVI")).toEqual(1666);
+        expect(romanToDec("MMI")).toEqual(2001);
+    }) 
 })
