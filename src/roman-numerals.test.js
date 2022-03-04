@@ -24,11 +24,10 @@ describe("decToRoman", () => {
     test('(C) Size Test Not > 3000 ', () => {
         expect(decToRoman(3001)).toEqual("");
     })
-    // test('(D) Size Test <= 0 ', () => {
-    //     expect(decToRoman(0)).toEqual("");
-    //     expect(decToRoman(-1)).toEqual("");
-    // })
-  
+    test('(D) Size Test <= 0 ', () => {
+        expect(decToRoman(0)).toEqual("");
+        expect(decToRoman(-1)).toEqual("");
+    })
 })
 
 
