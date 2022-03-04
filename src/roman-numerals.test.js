@@ -17,10 +17,10 @@ describe("decToRoman", () => {
             expect(decToRoman(dec)).toEqual(result);
         }    
     )
-    // test('(B) Check Numerals (All + Double Numeral) ', () => {
-    //     expect(decToRoman(1666)).toEqual("MDCLXVI");
-    //     expect(decToRoman(2001)).toEqual("MMI");
-    // })  
+    test('(B) Check Numerals (All + Double Numeral) ', () => {
+        expect(decToRoman(1666)).toEqual("MDCLXVI");
+        expect(decToRoman(2001)).toEqual("MMI");
+    })  
     // test('(C) Size Test Not > 3000 ', () => {
     //     expect(decToRoman(3001)).toEqual("");
     // })
