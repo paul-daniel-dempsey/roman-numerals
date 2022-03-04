@@ -11,23 +11,23 @@ const { decToRoman, romanToDec } = require("./roman-numerals");
 // (D) Sample includes EVERY Roman Numeral Added Together (1000+500+100+50+10+1=1666)
 
 describe("decToRoman", () => {
-    it.each([[1,'I'],[5,'V'],[10,'X'],[50,'L'],[100,'C'],[500,'D'],[1000,'M']])
-    (`(A) Check %i for Roman Equivalent`,
-        (dec,result) => {
-            expect(decToRoman(dec)).toEqual(result);
-        }    
-    )
-    test('(B) Size Test Not > 3000 ', () => {
-        expect(decToRoman(3001)).toEqual("");
-    })
-    test('(C) Size Test <= 0 ', () => {
-        expect(decToRoman(0)).toEqual("");
-        expect(decToRoman(-1)).toEqual("");
-    })
-    test('(D) Check Numerals (All + Double Numeral) ', () => {
-        expect(decToRoman(1666)).toEqual("MDCLXVI");
-        expect(decToRoman(2001)).toEqual("MMI");
-    })    
+    // it.each([[1,'I'],[5,'V'],[10,'X'],[50,'L'],[100,'C'],[500,'D'],[1000,'M']])
+    // (`(A) Check %i for Roman Equivalent`,
+    //     (dec,result) => {
+    //         expect(decToRoman(dec)).toEqual(result);
+    //     }    
+    // )
+    // test('(B) Size Test Not > 3000 ', () => {
+    //     expect(decToRoman(3001)).toEqual("");
+    // })
+    // test('(C) Size Test <= 0 ', () => {
+    //     expect(decToRoman(0)).toEqual("");
+    //     expect(decToRoman(-1)).toEqual("");
+    // })
+    // test('(D) Check Numerals (All + Double Numeral) ', () => {
+    //     expect(decToRoman(1666)).toEqual("MDCLXVI");
+    //     expect(decToRoman(2001)).toEqual("MMI");
+    // })    
 })
 
 
