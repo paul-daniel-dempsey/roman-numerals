@@ -10,7 +10,8 @@ const romanToDec = (numeral) => {
     // return romanToDecA(numeral);
     // return romanToDecD(numeral);
     // return romanToDecB(numeral);
-    return romanToDecC(numeral);
+    //return romanToDecC(numeral);
+    return romanToDecRefactor(numeral)
 }
 
 const romanToDecA = (numeral) => {
@@ -60,7 +61,7 @@ const romanToDecB = (numeral) => {
 const romanToDecC = (numeral) => {
 
     let convert = {};
-    convert['I'] =0;
+    convert[''] =0;
     convert['I'] =1;
     convert['V'] =5;
     convert['X'] =10;
@@ -72,6 +73,12 @@ const romanToDecC = (numeral) => {
     let total = 0;
     numeral.split('').forEach(element => { total = total + convert[element]});
     return (total > 3000 ? 0 : total);
+}
+
+const romanToDecRefactor = (numeral) => {
+    let convert = {'':0,'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000};
+    let total = numeral.split('').reduce((lhs, rhs_item) => lhs + convert[rhs_item], 0);
+    return (total <= 3000) ? total : 0;
 }
 
 module.exports = {decToRoman,romanToDec};
