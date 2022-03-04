@@ -6,9 +6,9 @@ const { decToRoman, romanToDec } = require("./roman-numerals");
 // One thing they never discovered though was the number zero
 
 // (A) What is a Roman Numeral? Check Each Numeral For Decimal Equivalent
-// (B) Size Test < 3000
-// (C) Size Test > 0
-// (D) Sample includes EVERY Roman Numeral Added Together (1000+500+100+50+10+1=1666)
+// (B) Sample includes EVERY Roman Numeral Added Together (1000+500+100+50+10+1=1666)
+// (C) Size Test < 3000
+// (D) Size Test > 0
 
 describe("decToRoman", () => {
     it.each([[1,'I'],[5,'V'],[10,'X'],[50,'L'],[100,'C'],[500,'D'],[1000,'M']])
@@ -17,17 +17,18 @@ describe("decToRoman", () => {
             expect(decToRoman(dec)).toEqual(result);
         }    
     )
-    // test('(B) Size Test Not > 3000 ', () => {
+    // test('(B) Check Numerals (All + Double Numeral) ', () => {
+    //     expect(decToRoman(1666)).toEqual("MDCLXVI");
+    //     expect(decToRoman(2001)).toEqual("MMI");
+    // })  
+    // test('(C) Size Test Not > 3000 ', () => {
     //     expect(decToRoman(3001)).toEqual("");
     // })
-    // test('(C) Size Test <= 0 ', () => {
+    // test('(D) Size Test <= 0 ', () => {
     //     expect(decToRoman(0)).toEqual("");
     //     expect(decToRoman(-1)).toEqual("");
     // })
-    // test('(D) Check Numerals (All + Double Numeral) ', () => {
-    //     expect(decToRoman(1666)).toEqual("MDCLXVI");
-    //     expect(decToRoman(2001)).toEqual("MMI");
-    // })    
+  
 })
 
 
